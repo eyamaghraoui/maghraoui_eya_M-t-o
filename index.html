@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Météo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header wrapper">
+
+    <div class="logo">
+      <img src="C:\Users\USER\Desktop\projet_dev\logo.svg">
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero wrapper">
+    <h1 class="hero_title">Comment est le ciel aujourd'hui ?</h1>
+
+    <div class="hero_search">
+      <input id="cityInput" placeholder= "Rechercher une ville" "donner le">
+      <button onclick="getWeather()"><b>Chercher</b></button>
+    </div>
+  </section>
+
+  <!-- CURRENT -->
+  <section class="current wrapper">
+    <div class="current_wether">
+      <div>
+        <h2 id="city">--</h2>
+        <p id="date">--</p>
+      </div>
+
+      <img id="icon" src="C:\Users\USER\Desktop\projet_dev\icon-partly-cloudy.webp">
+
+      <h6 id="temp"><b>--°</b></h6>
+    </div>
+
+    <div class="current_conditions">
+      <div class="box">Température <br><span id="feels">--</span></div>
+      <div class="box">Humidité<br><span id="humidity">--</span></div>
+      <div class="box">Vent <br><span id="wind">--</span></div>
+      <div class="box">Précipitation <br><span id="precip">--</span></div>
+    </div>
+  </section>
+
+  <!-- DAILY -->
+  <section class="daily wrapper">
+    <h2>Prévisions météorologiques</h2>
+    <div id="daily" class="daily_forcast"></div>
+  </section>
+
+  <!-- HOURLY -->
+  <section class="hourly wrapper">
+    <h2>Prévisions horaires</h2>
+    <div id="hourly" class="hourly_hours"></div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

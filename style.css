@@ -1,0 +1,157 @@
+:root {
+  --bg: #060b2d;
+  --card: #1c1f3a;
+  --blue: #4c63d2;
+  --text: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+.logo {
+  display: flex;
+  align-items: flex-start;
+}
+.hero {
+  text-align: center;
+}
+.hero_title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero_search {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero_search input {
+  padding: 15px;
+  width: 300px;
+  padding: 16px 20px 16px 60px;
+  border-radius: 10px;
+  border: none;
+  background: #1b1b2f;
+  color: white;
+  font-size: 1rem;
+  background-image: url(icon-search.svg);
+  background-repeat: no-repeat;
+  background-position: 24px center;
+  &:focus {
+    outline: 2px solid hsl(243, 6%, 84%);
+    background-color: #363a52;
+  }
+}
+
+.hero_search button {
+  font-size: large;
+  padding: 15px 25px;
+  background: #2d41a4;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: #162779;
+  }
+}
+
+/* CURRENT */
+.current_wether {
+  background-image: url("bg-today-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current_wether img {
+  width: 200px;
+}
+#city {
+  font-size: 2rem;
+  font-weight: bold;
+}
+#date {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+#temp {
+  font-size: 4rem;
+  font-weight: 800;
+}
+.current_conditions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.box {
+  color: rgba(255, 255, 255, 0.7);
+  background: var(--card);
+  padding: 25px;
+  border-radius: 10px;
+  min-height: 100px;
+}
+#feels,
+#humidity,
+#wind,
+#precip {
+  font-size: xx-large;
+}
+
+/* DAILY */
+.daily_forcast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.day {
+  background: var(--card);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* HOURLY */
+.hourly_hours {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.hour {
+  background: var(--card);
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 90px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .current_wether {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .current_conditions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
